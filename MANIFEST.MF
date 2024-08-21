@@ -1,0 +1,3 @@
+Manifest-Version: 1.5
+Main-Class: Maths
+Created-By: 1.0 (java-init)
