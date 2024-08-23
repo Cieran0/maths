@@ -13,7 +13,7 @@ public class Maths {
         List<Token> tokens = Tokenizer.tokenize_string(args_joined);
         double result = ExecutionEngine.execute_tokens(tokens);
 
-        printDouble(result);
+        print_double(result);
     }
 
     public static String join_string(String[] strings) {
@@ -24,8 +24,14 @@ public class Maths {
         return joined;
     }
 
-    public static void printDouble(double number) {
-        if (number == Math.floor(number))
+    public static void print_double(double number) {
+        if (number == Double.NaN)
+            System.out.println("NaN");
+        else if (number == Double.POSITIVE_INFINITY)
+            System.out.println("Inf");
+        else if (number == Double.NEGATIVE_INFINITY) 
+            System.out.println("-Inf");
+        else if (number == Math.floor(number))
             System.out.println((int)number);
         else 
             System.out.println(number);
