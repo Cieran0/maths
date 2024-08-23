@@ -1,7 +1,7 @@
 build:
 	javac -d src src/*.java
 	cd src; \
-    jar cmvf ../MANIFEST.MF ../Gamerr.jar *.class
+    jar cmvf ../MANIFEST.MF ../Maths.jar *.class
 
 run: build
-	java -jar Gamerr.jar
+	java -jar Maths.jar

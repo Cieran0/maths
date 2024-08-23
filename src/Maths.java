@@ -11,8 +11,9 @@ public class Maths {
         String args_joined = join_string(args);
 
         List<Token> tokens = Tokenizer.tokenize_string(args_joined);
+        double result = ExecutionEngine.execute_tokens(tokens);
 
-        System.out.println(ExecutionEngine.execute_tokens(tokens));
+        printDouble(result);
     }
 
     public static String join_string(String[] strings) {
@@ -21,6 +22,13 @@ public class Maths {
             joined += string + " ";
         }
         return joined;
+    }
+
+    public static void printDouble(double number) {
+        if (number == Math.floor(number))
+            System.out.println((int)number);
+        else 
+            System.out.println(number);
     }
 
 }
